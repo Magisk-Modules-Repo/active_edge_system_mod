@@ -6,10 +6,11 @@ You will also have a long squeeze and a double squeeze gesture, as well as seper
 like flat on the table or in landscape mode.
 
 
-### Information
+### Attention
 
 Ensure you are on an least Oreo 8.1 and have a current TWRP backup ready.
 The module replaces the SystemUIGoogle.apk that could lead to a non booting device
+
 
 
 ### More information and place for questions and support in the appropriate xda threads:
@@ -18,6 +19,7 @@ The module replaces the SystemUIGoogle.apk that could lead to a non booting devi
 #### [XDA Pixel 2 XL thread](https://forum.xda-developers.com/pixel-2-xl/themes/root-custom-active-edge-actions-edge-t3732383)
 
 
+
 ### Edge Sense Sense Plus
 
-#### ![Edge Sense Plus on Google Play](https://img.xda-cdn.com/Quid2yAsEr-W-fb5sfKfE66Ag_w=/http%3A%2F%2Fi.imgur.com%2F9WHaPVR.png)(https://play.google.com/store/apps/details?id=eu.duong.edgesenseplus&hl=en)
+#### [![Edge Sense Plus on Google Play](https://img.xda-cdn.com/Quid2yAsEr-W-fb5sfKfE66Ag_w=/http%3A%2F%2Fi.imgur.com%2F9WHaPVR.png)](https://play.google.com/store/apps/details?id=eu.duong.edgesenseplus&hl=en)
