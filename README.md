@@ -24,3 +24,16 @@ The module replaces the SystemUIGoogle.apk that could lead to a non booting devi
 
 ### Edge Sense Sense Plus
 #### [![Edge Sense Plus on Google Play](https://img.xda-cdn.com/Quid2yAsEr-W-fb5sfKfE66Ag_w=/http%3A%2F%2Fi.imgur.com%2F9WHaPVR.png)](https://play.google.com/store/apps/details?id=eu.duong.edgesenseplus&hl=en)
+
+
+### Changelog
+
+* __v4__
+  * Fixed long squeeze gesture not respecting squeeze sensitivy set in Active Edge settings
+  * Override Active Edge setting to allow squeeze gestures while screen is off.
+* __v3__
+  * Added long squeeze interval
+* __v2__
+  * Fixed Google Assistant not working when screen is off and locked
+* __v1__
+  * Initial release
