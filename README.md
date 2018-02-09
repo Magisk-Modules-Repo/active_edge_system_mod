@@ -28,6 +28,8 @@ The module replaces the SystemUIGoogle.apk that could lead to a non booting devi
 
 ### Changelog
 
+* __v5__
+  *  Fixed broken long squeeze
 * __v4__
   * Fixed long squeeze gesture not respecting squeeze sensitivy set in Active Edge settings
   * Override Active Edge setting to allow squeeze gestures while screen is off.
