@@ -28,6 +28,8 @@ The module replaces the SystemUIGoogle.apk that could lead to a non booting devi
 
 ### Changelog
 
+* __v7__
+  * Fixed long squeeze triggering again after a long squeeze
 * __v6__
   * Fixed long squeeze gesture not respecting squeeze sensitivity
 * __v5__
