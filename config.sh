@@ -90,34 +90,47 @@ set_permissions() {
 
 install_module() {
 
-
-	if [ "`getprop ro.product.device`" = "walleye" ]; then
-		
-		unzip -o "$ZIP" 'walleye/*' -d $INSTALLER 2>/dev/null
-		
-		ui_print "- Extracting module files for walleye"
-
-		APK_PATH=$INSTALLER/walleye/priv-app/SystemUIGoogle/SystemUIGoogle.apk
-		
-		mkdir -p $MODPATH/system/priv-app/SystemUIGoogle 2>/dev/null
-		cp -af $APK_PATH $MODPATH/system/priv-app/SystemUIGoogle/SystemUIGoogle.apk
-	fi
-
-	if [ "`getprop ro.product.device`" = "taimen" ]; then
-		unzip -o "$ZIP" 'taimen/*' -d $INSTALLER 2>/dev/null
+	ui_print "______________________________"
+	ui_print " "
+	ui_print "Installing Active Edge Module"
 	
-		ui_print "- Extracting module files for taimen"
-		
-		APK_PATH=$INSTALLER/taimen/priv-app/SystemUIGoogle/SystemUIGoogle.apk
-		mkdir -p $MODPATH/system/priv-app/SystemUIGoogle 2>/dev/null
-		cp -af $APK_PATH $MODPATH/system/priv-app/SystemUIGoogle/SystemUIGoogle.apk
-	fi
+	DEVICE=`getprop ro.product.device`
+	RELEASE=`getprop ro.build.version.release`
+	ui_print " "
 
 	
-	if [ "`getprop ro.product.device`" != "walleye" ] && [ "`getprop ro.product.device`" != "taimen" ]; then
+	ui_print " Performing compatibility check"
+	ui_print " "
+	ui_print "  Device is: "$DEVICE
+	ui_print "  Android version is: "$RELEASE
+	ui_print " "
 	
-		abort "- Incompatible device!"
+	if [ $DEVICE != "walleye" ] && [ $DEVICE != "taimen" ]; then
+		abort "   => Device '"$DEVICE"' is not supported"
 	fi
+	
+	if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "P" ]; then
+		abort "   => Android version '"$RELEASE"' is not supported"
+	fi
+	
+	ui_print "   => Your device is compatible. Continue with installation."
+	ui_print " "
+
+	unzip -o "$ZIP" $RELEASE'/'$DEVICE'/*' -d $INSTALLER 2>/dev/null
+	
+	ui_print " "
+	ui_print " Extracting module files for '"$DEVICE"' and Android Version '"$RELEASE
+	ui_print " "
+	
+	APK_PATH=$INSTALLER/$RELEASE/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
+	
+	ui_print $APK_PATH
+	
+	mkdir -p $MODPATH/system/priv-app/SystemUIGoogle 2>/dev/null
+	cp -af $APK_PATH $MODPATH/system/priv-app/SystemUIGoogle/SystemUIGoogle.apk
+
+	
+	
 
   
 }
