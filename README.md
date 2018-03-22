@@ -9,10 +9,15 @@ like flat on the table or in landscape mode.
 <br/>
 <br/>
 
+### Requirements
+
+Android Oreo 8.1 or Android P
+	
 ### Attention
 
-Ensure you are on an least Oreo 8.1 and have a current TWRP backup ready.
-The module replaces the SystemUIGoogle.apk that could lead to a non booting device
+Ensure have a current TWRP backup ready.
+The module replaces the SystemUIGoogle.apk that could lead to a non booting device.
+You can always also just run the MagiskUninstaller and flash Magisk again afterwards to get out of a bootloop.
 <br/>
 <br/>
 
@@ -28,6 +33,8 @@ The module replaces the SystemUIGoogle.apk that could lead to a non booting devi
 
 ### Changelog
 
+* __v8/P__
+  * Android P support
 * __v8__
   * Fixed unnecessary wakelocks
 * __v7__
