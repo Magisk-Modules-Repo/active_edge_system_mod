@@ -119,7 +119,7 @@ install_module() {
 	unzip -o "$ZIP" $RELEASE'/'$DEVICE'/*' -d $INSTALLER 2>/dev/null
 	
 	ui_print " "
-	ui_print " Extracting module files for '"$DEVICE"' and Android Version '"$RELEASE
+	ui_print " Extracting module files for '"$DEVICE"' and Android Version '"$RELEASE"'"
 	ui_print " "
 	
 	APK_PATH=$INSTALLER/$RELEASE/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
