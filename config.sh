@@ -96,6 +96,7 @@ install_module() {
 	
 	DEVICE=`getprop ro.product.device`
 	RELEASE=`getprop ro.build.version.release`
+	PREVIEW_VERSION=`getprop ro.build.version.preview_sdk`
 	ui_print " "
 
 	
@@ -116,6 +117,11 @@ install_module() {
 	ui_print "   => Your device is compatible. Continue with installation."
 	ui_print " "
 
+	
+	if [ $RELEASE == "P" ]; then
+		RELEASE=$RELEASE/$PREVIEW_VERSION
+	fi
+	
 	unzip -o "$ZIP" $RELEASE'/'$DEVICE'/*' -d $INSTALLER 2>/dev/null
 	
 	ui_print " "
