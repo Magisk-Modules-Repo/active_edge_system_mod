@@ -33,6 +33,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 ### Changelog
 
+* __v10__
+  * Android P DP2 support
 * __v9__
   * Magisk 16.3 compatibility
 * __v8/P__
