@@ -110,7 +110,7 @@ install_module() {
 		abort "   => Device '"$DEVICE"' is not supported"
 	fi
 	
-	if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "P" ]; then
+	if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "P" ] && [ $RELEASE != "9" ]; then
 		abort "   => Android version '"$RELEASE"' is not supported"
 	fi
 	
@@ -121,6 +121,10 @@ install_module() {
 	if [ $RELEASE == "P" ]; then
 		RELEASE=$RELEASE/$PREVIEW_VERSION
 	fi
+	
+	# if [ $RELEASE == "9" ]; then
+	# 	RELEASE=$RELEASE
+	# fi
 	
 	unzip -o "$ZIP" $RELEASE'/'$DEVICE'/*' -d $INSTALLER 2>/dev/null
 	
