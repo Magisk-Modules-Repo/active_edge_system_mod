@@ -32,7 +32,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
-
+* __v12__
+  * Decreased native squeeze cooldown time to improve double squeeze behavior
 * __v11__
   * Android P DP3 support
 * __v10__
