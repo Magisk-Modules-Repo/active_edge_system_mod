@@ -90,6 +90,18 @@ set_permissions() {
 
 install_module() {
 
+<<<<<<< .mine
+	ui_print "______________________________"
+	ui_print " "
+	ui_print "Installing Active Edge Module"
+	
+	DEVICE=`getprop ro.product.device`
+	RELEASE=`getprop ro.build.version.release`
+	PREVIEW_VERSION=`getprop ro.build.version.preview_sdk`
+	SECURITY_PATCH_VERSION=`getprop ro.build.version.security_patch`
+	ui_print " "
+||||||| .r272
+=======
 	ui_print "______________________________"
 	ui_print " "
 	ui_print "Installing Active Edge Module"
@@ -98,6 +110,7 @@ install_module() {
 	RELEASE=`getprop ro.build.version.release`
 	PREVIEW_VERSION=`getprop ro.build.version.preview_sdk`
 	ui_print " "
+>>>>>>> .r281
 
 	
 	ui_print " Performing compatibility check"
@@ -109,22 +122,76 @@ install_module() {
 	if [ $DEVICE != "walleye" ] && [ $DEVICE != "taimen" ]; then
 		abort "   => Device '"$DEVICE"' is not supported"
 	fi
+<<<<<<< .mine
+||||||| .r272
+
+	if [ "`getprop ro.product.device`" = "taimen" ]; then
+		unzip -o "$ZIP" 'taimen/*' -d $INSTALLER 2>/dev/null
+=======
 	
-	if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "P" ] && [ $RELEASE != "9" ]; then
+	if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "P" ]; then
 		abort "   => Android version '"$RELEASE"' is not supported"
 	fi
 	
 	ui_print "   => Your device is compatible. Continue with installation."
 	ui_print " "
 
+>>>>>>> .r281
 	
+<<<<<<< .mine
+	if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "P" ] && [ $RELEASE != "9" ]; then
+		abort "   => Android version '"$RELEASE"' is not supported"
+||||||| .r272
+		ui_print "- Extracting module files for taimen"
+		
+		APK_PATH=$INSTALLER/taimen/priv-app/SystemUIGoogle/SystemUIGoogle.apk
+		mkdir -p $MODPATH/system/priv-app/SystemUIGoogle 2>/dev/null
+		cp -af $APK_PATH $MODPATH/system/priv-app/SystemUIGoogle/SystemUIGoogle.apk
+=======
+	if [ $RELEASE == "P" ]; then
+		RELEASE=$RELEASE/$PREVIEW_VERSION
+>>>>>>> .r281
+	fi
+<<<<<<< .mine
+	
+	ui_print "   => Your device is compatible. Continue with installation."
+	ui_print " "
+||||||| .r272
+=======
+	
+	unzip -o "$ZIP" $RELEASE'/'$DEVICE'/*' -d $INSTALLER 2>/dev/null
+	
+	ui_print " "
+	ui_print " Extracting module files for '"$DEVICE"' and Android Version '"$RELEASE"'"
+	ui_print " "
+	
+	APK_PATH=$INSTALLER/$RELEASE/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
+	
+	ui_print $APK_PATH
+	
+	mkdir -p $MODPATH/system/priv-app/SystemUIGoogle 2>/dev/null
+	cp -af $APK_PATH $MODPATH/system/priv-app/SystemUIGoogle/SystemUIGoogle.apk
+>>>>>>> .r281
+
+	
+<<<<<<< .mine
 	if [ $RELEASE == "P" ]; then
 		RELEASE=$RELEASE/$PREVIEW_VERSION
 	fi
+||||||| .r272
+	if [ "`getprop ro.product.device`" != "walleye" ] && [ "`getprop ro.product.device`" != "taimen" ]; then
+=======
+>>>>>>> .r281
 	
-	# if [ $RELEASE == "9" ]; then
-	# 	RELEASE=$RELEASE
-	# fi
+<<<<<<< .mine
+	if [ $RELEASE == "9" ]; then
+	 	RELEASE=$RELEASE/$SECURITY_PATCH_VERSION
+	fi
+||||||| .r272
+		abort "- Incompatible device!"
+	fi
+=======
+>>>>>>> .r281
 	
 	unzip -o "$ZIP" $RELEASE'/'$DEVICE'/*' -d $INSTALLER 2>/dev/null
 	
