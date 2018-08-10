@@ -33,7 +33,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 ### Changelog
 * __v15__
-  * Decreased native squeeze cooldown from 450ms to 200ms to fix double squeeze
+  * Long Squeeze is back on Android Pie!
+  * Decreased Squeeze cooldown time to improve double squeeze experience
 * __v14__
   * Android Pie support
 * __v13__
