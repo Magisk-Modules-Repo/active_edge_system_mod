@@ -32,6 +32,10 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v17__
+  * Fixed an issue where no short squeeze was possible after a long squeeze
+  * Fixed freezing squeeze animation
+  * Fixed 2nd haptic feedback not happening on a long squeeze
 * __v15__
   * Long Squeeze is back on Android Pie!
   * Decreased Squeeze cooldown time to improve double squeeze experience
