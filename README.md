@@ -32,6 +32,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v18__
+  * Pixel 3/XL compatibility
 * __v17__
   * Fixed an issue where no short squeeze was possible after a long squeeze
   * Fixed freezing squeeze animation

@@ -107,7 +107,7 @@ install_module() {
 	ui_print "  Android version is: "$RELEASE
 	ui_print " "
 	
-	if [ $DEVICE != "walleye" ] && [ $DEVICE != "taimen" ]; then
+	if [ $DEVICE != "walleye" ] && [ $DEVICE != "taimen" ] && [ $DEVICE != "crosshatch" ] && [ $DEVICE != "blueline" ]; then
 		abort "   => Device '"$DEVICE"' is not supported"
 	fi
 	
