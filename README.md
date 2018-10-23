@@ -1,4 +1,4 @@
-# Pixel 2 and Pixel 2 XL - Active Edge Magisk Module for Edge Sense Plus
+# Pixel 2/XL and Pixel 3/XL - Active Edge Magisk Module for Edge Sense Plus
 
 ![Edge Sense Plus](https://img.xda-cdn.com/MES6opinXpBdhGjoqHaaP6YuOow=/http%3A%2F%2Fi.imgur.com%2FZscjQRD.png)
 
