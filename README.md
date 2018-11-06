@@ -32,6 +32,9 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v19__
+  * Pixel November Update compatibility
+  * Removed compatibility for Oreo and Pie Preview to shrink module size - You can download older releases from [here](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/releases)
 * __v18__
   * Pixel 3/XL compatibility
 * __v17__
