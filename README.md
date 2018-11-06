@@ -32,9 +32,10 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v21__
+  * Added backwards compatibility for previous Pie Updates
 * __v20__
   * Added back Oreo compatibility.
-*
 * __v19__
   * Pixel November Update compatibility
   * Removed compatibility for Oreo and Pie Preview to shrink module size - You can download older releases from [here](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/releases)

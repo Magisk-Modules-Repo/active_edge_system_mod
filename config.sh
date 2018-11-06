@@ -97,7 +97,7 @@ install_module() {
 	DEVICE=`getprop ro.product.device`
 	RELEASE=`getprop ro.build.version.release`
 	#PREVIEW_VERSION=`getprop ro.build.version.preview_sdk`
-	#SECURITY_PATCH_VERSION=`getprop ro.build.version.security_patch`
+	SECURITY_PATCH_VERSION=`getprop ro.build.version.security_patch`
 	ui_print " "
 
 	
@@ -123,9 +123,9 @@ install_module() {
 	#	RELEASE=$RELEASE/$PREVIEW_VERSION
 	#fi
 	
-	#if [ $RELEASE == "9" ]; then
-	# 	RELEASE=$RELEASE/$SECURITY_PATCH_VERSION
-	#fi
+	if [ $RELEASE == "9" ]; then
+	 	RELEASE=$RELEASE/$SECURITY_PATCH_VERSION
+	fi
 	
 	unzip -o "$ZIP" $RELEASE'/'$DEVICE'/*' -d $INSTALLER 2>/dev/null
 	
