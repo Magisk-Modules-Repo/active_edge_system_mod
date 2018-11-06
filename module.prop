@@ -1,7 +1,7 @@
 id=active_edge_system_mod
 name=Active Edge Mod for Pixel 2/XL and Pixel 3/XL
-version=v19
-versionCode=19
+version=v20
+versionCode=20
 author=j to the 4n
 description=Allows customization of Active Edge in combination with Edge Sense Plus
 minMagisk=1500

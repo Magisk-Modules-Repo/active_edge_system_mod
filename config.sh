@@ -111,7 +111,7 @@ install_module() {
 		abort "   => Device '"$DEVICE"' is not supported"
 	fi
 	
-	if [ $RELEASE != "9" ]; then
+	if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "9" ]; then
 		abort "   => Android version '"$RELEASE"' is not supported"
 	fi
 	
