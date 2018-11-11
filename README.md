@@ -32,6 +32,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v22__
+  * Added backwards compatibility for intial Pie release of Pixel 2/XL
 * __v21__
   * Added backwards compatibility for previous Pie Updates
 * __v20__
