@@ -96,7 +96,6 @@ install_module() {
 	
 	DEVICE=`getprop ro.product.device`
 	RELEASE=`getprop ro.build.version.release`
-	#PREVIEW_VERSION=`getprop ro.build.version.preview_sdk`
 	SECURITY_PATCH_VERSION=`getprop ro.build.version.security_patch`
 	ui_print " "
 
@@ -105,6 +104,7 @@ install_module() {
 	ui_print " "
 	ui_print "  Device is: "$DEVICE
 	ui_print "  Android version is: "$RELEASE
+	ui_print "  Security patch version is: "$SECURITY_PATCH_VERSION
 	ui_print " "
 	
 	if [ $DEVICE != "walleye" ] && [ $DEVICE != "taimen" ] && [ $DEVICE != "crosshatch" ] && [ $DEVICE != "blueline" ]; then
@@ -115,17 +115,17 @@ install_module() {
 		abort "   => Android version '"$RELEASE"' is not supported"
 	fi
 	
-	ui_print "   => Your device is compatible. Continue with installation."
-	ui_print " "
 
-	
-	#if [ $RELEASE == "P" ]; then
-	#	RELEASE=$RELEASE/$PREVIEW_VERSION
-	#fi
-	
 	if [ $RELEASE == "9" ]; then
 	 	RELEASE=$RELEASE/$SECURITY_PATCH_VERSION
 	fi
+	
+	#Not working somehow
+	#if [ ! -d $RELEASE'/'$DEVICE'/' ]; then
+	#	ui_print   "The folder '"$RELEASE'/'$DEVICE'/'"' does not exist"
+	#	abort "   => The update with security patch version '"$SECURITY_PATCH_VERSION"' is not supported yet"
+	#fi	
+	
 	
 	unzip -o "$ZIP" $RELEASE'/'$DEVICE'/*' -d $INSTALLER 2>/dev/null
 	
