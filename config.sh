@@ -126,6 +126,8 @@ install_module() {
 	#	abort "   => The update with security patch version '"$SECURITY_PATCH_VERSION"' is not supported yet"
 	#fi	
 	
+	ui_print "   => Your device is compatible. Continue with installation."
+	ui_print " "
 	
 	unzip -o "$ZIP" $RELEASE'/'$DEVICE'/*' -d $INSTALLER 2>/dev/null
 	
