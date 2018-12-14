@@ -32,8 +32,6 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
-* __v24__
-  * Added statusbar quicksetting to toggle active edge on/off - Needs new Edge Sense Plus update from playstore!
 * __v23__
   * Pixel December Update compatibility
 * __v22__
