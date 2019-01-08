@@ -32,12 +32,10 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
-* __v26__
-  * Readded statusbar quicksetting toggle to enable/disable active edge
+* __v27__
+  * January Update compatibility
 * __v25__
   * Reverted v24 changes
-* __v24__
-  * Added statusbar quicksetting toggle to enable/disable active edge
 * __v23__
   * Pixel December Update compatibility
 * __v22__
