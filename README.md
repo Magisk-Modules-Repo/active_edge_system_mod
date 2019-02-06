@@ -32,6 +32,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v29__
+  * Rebased with february patch files. January patch files were compatible, but caused some glitches.
 * __v28__
   * Feburary Update compatibility
 * __v27__
