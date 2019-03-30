@@ -171,22 +171,18 @@ on_install() {
 	ui_print "   => Your device is compatible. Continue with installation."
 	ui_print " "
 	
-	unzip -o "$ZIP" $RELEASE'/'$DEVICE'/*' -d $INSTALLER 2>/dev/null
+	unzip -o "$ZIPFILE" $RELEASE'/'$DEVICE'/*' -d $TMPDIR
 	
 	ui_print " "
 	ui_print " Extracting module files for '"$DEVICE"' and Android Version '"$RELEASE"'"
 	ui_print " "
 	
-	APK_PATH=$INSTALLER/$RELEASE/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
+	APK_PATH=$TMPDIR/$RELEASE/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
 	
 	ui_print $APK_PATH
 	
-	mkdir -p $MODPATH/system/priv-app/SystemUIGoogle 2>/dev/null
+	mkdir -p $MODPATH/system/priv-app/SystemUIGoogle
 	cp -af $APK_PATH $MODPATH/system/priv-app/SystemUIGoogle/SystemUIGoogle.apk
-
-	
-	
-
   
 }
 
