@@ -32,6 +32,9 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v34__
+  * April  Update compatibility
+  * Removed 2018.09-2019.02 modules to shrink module size.
 * __v33__
   * Updated to use the new magisk installer templated
 * __v29__
