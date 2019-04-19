@@ -12,11 +12,14 @@ like flat on the table or in landscape mode.
 ### Requirements
 
 Android Oreo 8.1 or Android P
+
+Magisk module will always just support the last five security patch levels. 
+Compatible versions for older patch levels can be flashed from [GitHub](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/releases)
 	
 ### Attention
 
 Ensure have a current TWRP backup ready.
-The module replaces the SystemUIGoogle.apk that could lead to a non booting device.
+The module replaces the GoogleSystemUIGoogle.apk that could lead to a non booting device.
 You can always also just run the MagiskUninstaller and flash Magisk again afterwards to get out of a bootloop.
 <br/>
 <br/>
@@ -25,6 +28,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 #### [XDA Pixel 2 thread](https://forum.xda-developers.com/pixel-2/themes/root-custom-active-edge-actions-edge-t3732368)
 #### [XDA Pixel 2 XL thread](https://forum.xda-developers.com/pixel-2-xl/themes/root-custom-active-edge-actions-edge-t3732383)
+#### [XDA Pixel 3 thread](https://forum.xda-developers.com/pixel-3/themes/app-21st-oct-edge-sense-plus-1-10-0-t3856787)
+#### [XDA Pixel 3 XL thread](https://forum.xda-developers.com/pixel-3-xl/themes/app-21st-oct-edge-sense-plus-1-10-0-t3856788)
 <br/>
 
 ### Edge Sense Sense Plus
@@ -33,69 +38,4 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 ### Changelog
 * __v34__
-  * April  Update compatibility
-  * Removed 2018.09-2019.02 modules to shrink module size.
-* __v33__
-  * Updated to use the new magisk installer templated
-* __v29__
-  * Rebased with february patch files. January patch files were compatible, but caused some glitches.
-* __v28__
-  * Feburary Update compatibility
-* __v27__
-  * January Update compatibility
-* __v25__
-  * Reverted v24 changes
-* __v23__
-  * Pixel December Update compatibility
-* __v22__
-  * Added backwards compatibility for intial Pie release of Pixel 2/XL
-* __v21__
-  * Added backwards compatibility for previous Pie Updates
-* __v20__
-  * Added back Oreo compatibility.
-* __v19__
-  * Pixel November Update compatibility
-  * Removed compatibility for Oreo and Pie Preview to shrink module size - You can download older releases from [here](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/releases)
-* __v18__
-  * Pixel 3/XL compatibility
-* __v17__
-  * Fixed an issue where no short squeeze was possible after a long squeeze
-  * Fixed freezing squeeze animation
-  * Fixed 2nd haptic feedback not happening on a long squeeze
-* __v15__
-  * Long Squeeze is back on Android Pie!
-  * Decreased Squeeze cooldown time to improve double squeeze experience
-* __v14__
-  * Android Pie support
-* __v13__
-  * Android P DP4 support
-* __v12__
-  * Decreased native squeeze cooldown time to improve double squeeze behavior
-* __v11__
-  * Android P DP3 support
-* __v10__
-  * Android P DP2 support
-* __v9__
-  * Magisk 16.3 compatibility
-* __v8/P__
-  * Android P support
-* __v9__
-  * Magisk 16.3 compatibility
-* __v8/P__
-  * Android P support
-* __v8__
-  * Fixed unnecessary wakelocks
-* __v7__
-  * Fixed long squeeze triggering again after a long squeeze
-* __v6__
-  * Fixed long squeeze gesture not respecting squeeze sensitivity
-* __v5__
-  *  Fixed broken long squeeze
-* __v4__
-  * Override Active Edge setting to allow squeeze gestures while screen is off.
-* __v3__
-  * Added long squeeze interval
-* __v2__
-  * Fixed Google Assistant not working when screen is off and locked
-* __v1__
-  * Initial release
+  * Magisk module will now always just support the last five security patch levels. Compatible versions for older patch levels can be flashed from [GitHub](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/releases)
