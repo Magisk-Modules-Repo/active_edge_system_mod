@@ -37,5 +37,5 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
-* __v34__
+* __v35__
   * Magisk module will now always just support the last five security patch levels. Compatible versions for older patch levels can be flashed from [GitHub](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/releases)
