@@ -141,45 +141,33 @@ on_install() {
 	SECURITY_PATCH_VERSION=`getprop ro.build.version.security_patch`
 	ui_print " "
 
-	
-	ui_print " Performing compatibility check"
-	ui_print " "
-	ui_print "  Device is: "$DEVICE
-	ui_print "  Android version is: "$RELEASE
-	ui_print "  Security patch version is: "$SECURITY_PATCH_VERSION
+
+	ui_print "Device: "$DEVICE
+	ui_print "Android version: "$RELEASE
+	ui_print "Security patch version: "$SECURITY_PATCH_VERSION
 	ui_print " "
 	
 	if [ $DEVICE != "walleye" ] && [ $DEVICE != "taimen" ] && [ $DEVICE != "crosshatch" ] && [ $DEVICE != "blueline" ]; then
-		abort "   => Device '"$DEVICE"' is not supported"
+		abort " => Device '"$DEVICE"' is not supported"
 	fi
 	
 	if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "9" ]; then
-		abort "   => Android version '"$RELEASE"' is not supported"
+		abort " => Android version '"$RELEASE"' is not supported"
 	fi
-	
 
 	if [ $RELEASE == "9" ]; then
 	 	RELEASE=$RELEASE/$SECURITY_PATCH_VERSION
 	fi
 	
-	#Not working somehow
-	#if [ ! -d $RELEASE'/'$DEVICE'/' ]; then
-	#	ui_print   "The folder '"$RELEASE'/'$DEVICE'/'"' does not exist"
-	#	abort "   => The update with security patch version '"$SECURITY_PATCH_VERSION"' is not supported yet"
-	#fi	
-	
-	ui_print "   => Your device is compatible. Continue with installation."
-	ui_print " "
-	
 	unzip -o "$ZIPFILE" $RELEASE'/'$DEVICE'/*' -d $TMPDIR
-	
-	ui_print " "
-	ui_print " Extracting module files for '"$DEVICE"' and Android Version '"$RELEASE"'"
-	ui_print " "
 	
 	APK_PATH=$TMPDIR/$RELEASE/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
 	
-	ui_print $APK_PATH
+	if [ ! -f $APK_PATH ]; then
+		abort " => The update with security patch version '"$SECURITY_PATCH_VERSION"' is not supported yet. Also only the last 5 security patch levels are supported. For older versions install the module from GitHub: https://github.com/Magisk-Modules-Repo/active_edge_system_mod"
+	fi	
+	
+	ui_print "Device is compatible, continue with installation."
 	
 	mkdir -p $MODPATH/system/priv-app/SystemUIGoogle
 	cp -af $APK_PATH $MODPATH/system/priv-app/SystemUIGoogle/SystemUIGoogle.apk
