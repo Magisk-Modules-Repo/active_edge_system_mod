@@ -147,7 +147,7 @@ on_install() {
 	ui_print "Security patch version: "$SECURITY_PATCH_VERSION
 	ui_print " "
 	
-	if [ $DEVICE != "walleye" ] && [ $DEVICE != "taimen" ] && [ $DEVICE != "crosshatch" ] && [ $DEVICE != "blueline" ]; then
+	if [ $DEVICE != "walleye" ] && [ $DEVICE != "taimen" ] && [ $DEVICE != "crosshatch" ] && [ $DEVICE != "blueline" ] && [ $DEVICE != "bonito" ] && [ $DEVICE != "sargo" ]; then
 		abort " => Device '"$DEVICE"' is not supported"
 	fi
 	
