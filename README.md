@@ -37,6 +37,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v39__
+  * June Patch Level compatibility
 * __v37__
   * Added Pixel 3a compatibility (sargo and bonito)
 * __v36__
