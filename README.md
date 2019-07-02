@@ -30,6 +30,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 #### [XDA Pixel 2 XL thread](https://forum.xda-developers.com/pixel-2-xl/themes/root-custom-active-edge-actions-edge-t3732383)
 #### [XDA Pixel 3 thread](https://forum.xda-developers.com/pixel-3/themes/app-21st-oct-edge-sense-plus-1-10-0-t3856787)
 #### [XDA Pixel 3 XL thread](https://forum.xda-developers.com/pixel-3-xl/themes/app-21st-oct-edge-sense-plus-1-10-0-t3856788)
+#### [XDA Pixel 3a thread](https://forum.xda-developers.com/pixel-3a/themes/tweet-app-edge-sense-plus-customize-t3928923)
+#### [XDA Pixel 3a XL thread](https://forum.xda-developers.com/pixel-3a-xl/themes/app-edge-sense-plus-customize-active-t3928921)
 <br/>
 
 ### Edge Sense Sense Plus
@@ -37,6 +39,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v40__
+  * July Patch Level compatibility
 * __v39__
   * June Patch Level compatibility
 * __v37__

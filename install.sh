@@ -152,25 +152,40 @@ on_install() {
 	fi
 	
 	if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "9" ]; then
-		abort " => Android version '"$RELEASE"' is not supported"
+	#if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "9" ] && [ $RELEASE != "Q" ] && [ $RELEASE != "10" ]; then
+		abort "   => Android version '"$RELEASE"' is not supported"
 	fi
+	
+	RELEASEFOLDER=$RELEASE
+	
 
-	if [ $RELEASE == "9" ]; then
-	 	RELEASE=$RELEASE/$SECURITY_PATCH_VERSION
+	if [ $RELEASE != "8.1.0" ]; then
+	 	RELEASEFOLDER=$RELEASE/$SECURITY_PATCH_VERSION
 	fi
 	
-	unzip -o "$ZIPFILE" $RELEASE'/'$DEVICE'/*' -d $TMPDIR
 	
-	APK_PATH=$TMPDIR/$RELEASE/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
+	unzip -o "$ZIPFILE" $RELEASEFOLDER'/'$DEVICE'/*' -d $TMPDIR
+	
+	
+	APK_PATH=$TMPDIR/$RELEASEFOLDER/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
 	
 	if [ ! -f $APK_PATH ]; then
 		abort " => The update with security patch version '"$SECURITY_PATCH_VERSION"' is not supported yet. Also only the last 5 security patch levels are supported. For older versions install the module from GitHub: https://github.com/Magisk-Modules-Repo/active_edge_system_mod"
 	fi	
 	
 	ui_print "Device is compatible, continue with installation."
+		
+	TARGETPATH=$MODPATH/system/priv-app/SystemUIGoogle
 	
-	mkdir -p $MODPATH/system/priv-app/SystemUIGoogle
-	cp -af $APK_PATH $MODPATH/system/priv-app/SystemUIGoogle/SystemUIGoogle.apk
+	if [ $RELEASE == "Q" ] || [ $RELEASE == "10" ]; then
+		TARGETPATH=$MODPATH/system/product/priv-app/SystemUIGoogle
+	fi
+	
+	ui_print "TARGETPATH:"$TARGETPATH
+	
+	mkdir -p $TARGETPATH
+	cp -af $APK_PATH $TARGETPATH/SystemUIGoogle.apk
+	
   
 }
 
