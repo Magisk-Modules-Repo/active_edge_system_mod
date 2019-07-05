@@ -39,6 +39,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v41__
+  * Fixed Pixel 3a XL (bonito)
 * __v40__
   * July Patch Level compatibility
 * __v39__
