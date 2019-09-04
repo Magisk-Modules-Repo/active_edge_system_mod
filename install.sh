@@ -151,8 +151,7 @@ on_install() {
 		abort " => Device '"$DEVICE"' is not supported"
 	fi
 	
-	if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "9" ]; then
-	#if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "9" ] && [ $RELEASE != "Q" ] && [ $RELEASE != "10" ]; then
+	if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "9" ] && [ $RELEASE != "Q" ] && [ $RELEASE != "10" ]; then
 		abort "   => Android version '"$RELEASE"' is not supported"
 	fi
 	

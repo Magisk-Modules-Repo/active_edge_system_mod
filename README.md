@@ -9,9 +9,9 @@ like flat on the table or in landscape mode.
 <br/>
 <br/>
 
-### Requirements
+### Minimum Requirements
 
-Android Oreo 8.1 or Android P
+Android Oreo 8.1
 
 Magisk module will always just support the last five security patch levels. 
 Compatible versions for older patch levels can be flashed from [GitHub](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/releases)
@@ -39,6 +39,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v50_
+  * Android 10 support
 * __v41__
   * Fixed Pixel 3a XL (bonito)
 * __v40__
