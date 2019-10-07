@@ -40,6 +40,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 ### Changelog
 * __v50_
+  * October Patch Level compatibility
+* __v50_
   * Android 10 support
 * __v41__
   * Fixed Pixel 3a XL (bonito)
