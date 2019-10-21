@@ -11,7 +11,7 @@ like flat on the table or in landscape mode.
 
 ### Minimum Requirements
 
-Android Oreo 8.1
+Android Pie 9.0
 
 Magisk module will always just support the last five security patch levels. 
 Compatible versions for older patch levels can be flashed from [GitHub](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/releases)
@@ -39,6 +39,9 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v51_
+  * Moved files from master and download correct SystemUIGoogle.apk (device, release and path version) from the Files branch.
+  * Credits to Zackptg5 for the curl lib and Skittles for the idea and updated script.
 * __v50_
   * October Patch Level compatibility
 * __v50_

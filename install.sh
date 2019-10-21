@@ -151,41 +151,42 @@ on_install() {
 		abort " => Device '"$DEVICE"' is not supported"
 	fi
 	
-	if [ $RELEASE != "8.1.0" ] && [ $RELEASE != "9" ] && [ $RELEASE != "Q" ] && [ $RELEASE != "10" ]; then
+	if [ $RELEASE != "9" ] && [ $RELEASE != "Q" ] && [ $RELEASE != "10" ]; then
 		abort "   => Android version '"$RELEASE"' is not supported"
 	fi
 	
 	RELEASEFOLDER=$RELEASE
 	
-
 	if [ $RELEASE != "8.1.0" ]; then
 	 	RELEASEFOLDER=$RELEASE/$SECURITY_PATCH_VERSION
 	fi
 	
+	unzip -o "$ZIPFILE" curl -d $TMPDIR
+	cp -f $TMPDIR/curl $MODPATH/curl
+	chmod 0755 $MODPATH/curl
 	
-	unzip -o "$ZIPFILE" $RELEASEFOLDER'/'$DEVICE'/*' -d $TMPDIR
-	
-	
-	APK_PATH=$TMPDIR/$RELEASEFOLDER/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
-	
-	if [ ! -f $APK_PATH ]; then
-		abort " => The update with security patch version '"$SECURITY_PATCH_VERSION"' is not supported yet. Also only the last 5 security patch levels are supported. For older versions install the module from GitHub: https://github.com/Magisk-Modules-Repo/active_edge_system_mod"
-	fi	
-	
-	ui_print "Device is compatible, continue with installation."
-		
+	APK_PATH=$RELEASEFOLDER/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
+
 	TARGETPATH=$MODPATH/system/priv-app/SystemUIGoogle
 	
 	if [ $RELEASE == "Q" ] || [ $RELEASE == "10" ]; then
 		TARGETPATH=$MODPATH/system/product/priv-app/SystemUIGoogle
 	fi
 	
-	ui_print "TARGETPATH:"$TARGETPATH
-	
+	URL=https://github.com/Magisk-Modules-Repo/active_edge_system_mod/raw/Files/$APK_PATH
+	ui_print "Downloading SystemUIGoogle.apk for your device..."
+
 	mkdir -p $TARGETPATH
-	cp -af $APK_PATH $TARGETPATH/SystemUIGoogle.apk
+	$MODPATH/curl -k -L $URL -o $TARGETPATH/SystemUIGoogle.apk
+			
+	if [ ! -f $TARGETPATH/SystemUIGoogle.apk ]; then
+		ui_print "File does not exist:"$URL
+		abort " => The update with security patch version '"$SECURITY_PATCH_VERSION"' is not supported yet. Please wait for the module to be updated."
+	fi	
 	
-  
+	ui_print " "
+	ui_print "SUCCESSFULLY INSTALLED."
+	ui_print " "
 }
 
 # Only some special files require specific permissions

@@ -12,6 +12,6 @@ SECURITY_PATCH_VERSION=`getprop ro.build.version.security_patch`
 
 rm -f $MODDIR/disable
 
-if [ $SUPPORTED_PATCH_VERSION \< $SECURITY_PATCH_VERSION ]; then
+if [ $SUPPORTED_PATCH_VERSION -lt $SECURITY_PATCH_VERSION ]; then
 	touch $MODDIR/disable
 fi
