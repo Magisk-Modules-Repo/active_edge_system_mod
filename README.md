@@ -39,8 +39,10 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v53_
+  * November Patch Level compatibility
 * __v52_
-  * Pixel 4XL support added
+  * Pixel 4 support added
 * __v51_
   * Moved files from master and download correct SystemUIGoogle.apk (device, release and path version) from the Files branch.
   * Credits to Zackptg5 for the curl lib and Skittles for the idea and updated script.
