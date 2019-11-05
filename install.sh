@@ -180,8 +180,11 @@ on_install() {
 	$MODPATH/curl -k -L $URL -o $TARGETPATH/SystemUIGoogle.apk
 			
 	if [ ! -f $TARGETPATH/SystemUIGoogle.apk ]; then
-		ui_print "File does not exist:"$URL
-		abort " => The update with security patch version '"$SECURITY_PATCH_VERSION"' is not supported yet. Please wait for the module to be updated."
+		ui_print "Download FAILED: "$URL
+		ui_print ""
+		ui_print "Possible reasons:"
+		ui_print " => Github servers are sometimes unreliable. Check the changelog if the current security patch is supported. If that is the case try to install the module again till the download succeeds"
+		abort " => The update with security patch version '"$SECURITY_PATCH_VERSION"' is not supported yet. In that case please wait for the module to be updated."
 	fi	
 	
 	ui_print " "
