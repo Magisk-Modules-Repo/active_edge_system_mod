@@ -39,6 +39,8 @@ You can always also just run the MagiskUninstaller and flash Magisk again afterw
 
 
 ### Changelog
+* __v54_
+  * Added MD5 Sum check to prevent corrupted files from bad downloads to be flashed
 * __v53_
   * November Patch Level compatibility
 * __v52_
