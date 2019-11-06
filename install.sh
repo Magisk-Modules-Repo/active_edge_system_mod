@@ -178,7 +178,10 @@ on_install() {
 
 	mkdir -p $TARGETPATH
 	
-	RMD5=$($MODPATH/curl -sL $URL | md5sum | cut -d ' ' -f 1)
+
+	$MODPATH/curl -k -L $URL.md5 -o $TMPDIR/SystemUIGoogle.apk.md5
+	read -r RMD5 < $TMPDIR/SystemUIGoogle.apk.md5
+	
 	$MODPATH/curl -k -L $URL -o $TARGETPATH/SystemUIGoogle.apk
     LMD5="$(md5sum "$TARGETPATH/SystemUIGoogle.apk" | cut -d ' ' -f 1)"
 	
