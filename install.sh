@@ -177,8 +177,15 @@ on_install() {
 	ui_print "Downloading SystemUIGoogle.apk for your device..."
 
 	mkdir -p $TARGETPATH
+	
+	RMD5=$($MODPATH/curl -sL $URL | md5sum | cut -d ' ' -f 1)
 	$MODPATH/curl -k -L $URL -o $TARGETPATH/SystemUIGoogle.apk
-			
+    LMD5="$(md5sum "$TARGETPATH/SystemUIGoogle.apk" | cut -d ' ' -f 1)"
+    
+    if [ ! "$LMD5" == "$RMD5" ]; then
+      abort "MD5 of downloaded file does not match the remote file! Please try to flash the module again. Aborting."
+    fi
+	
 	if [ ! -f $TARGETPATH/SystemUIGoogle.apk ]; then
 		ui_print "Download FAILED: "$URL
 		ui_print ""
