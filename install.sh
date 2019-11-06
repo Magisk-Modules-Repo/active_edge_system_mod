@@ -181,7 +181,10 @@ on_install() {
 	RMD5=$($MODPATH/curl -sL $URL | md5sum | cut -d ' ' -f 1)
 	$MODPATH/curl -k -L $URL -o $TARGETPATH/SystemUIGoogle.apk
     LMD5="$(md5sum "$TARGETPATH/SystemUIGoogle.apk" | cut -d ' ' -f 1)"
-    
+	
+	ui_print "Local MD5: "$LMD5
+	ui_print "REMOTE MD5: "$RMD5
+	
     if [ ! "$LMD5" == "$RMD5" ]; then
       abort "MD5 of downloaded file does not match the remote file! Please try to flash the module again. Aborting."
     fi
