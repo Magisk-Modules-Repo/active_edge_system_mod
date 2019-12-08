@@ -1,4 +1,4 @@
-# Pixel 2/XL and Pixel 3/XL - Active Edge Magisk Module for Edge Sense Plus
+# Active Edge Mod for Pixel devices
 
 ![Edge Sense Plus](https://img.xda-cdn.com/MES6opinXpBdhGjoqHaaP6YuOow=/http%3A%2F%2Fi.imgur.com%2FZscjQRD.png)
 
@@ -9,18 +9,11 @@ like flat on the table or in landscape mode.
 <br/>
 <br/>
 
-### Minimum Requirements
+### Requirements
 
-Android Pie 9.0
+A pixel device with a squeeze sensor in the frame, so all pixel devices starting with the Pixel 2. The original Pixel is not supported.
+After installing the Magisk Module you need to install the Edge Sense Plus app from the playstore.
 
-Magisk module will always just support the last five security patch levels. 
-Compatible versions for older patch levels can be flashed from [GitHub](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/releases)
-	
-### Attention
-
-Ensure have a current TWRP backup ready.
-The module replaces the GoogleSystemUIGoogle.apk that could lead to a non booting device.
-You can always also just run the MagiskUninstaller and flash Magisk again afterwards to get out of a bootloop.
 <br/>
 <br/>
 
