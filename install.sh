@@ -188,10 +188,7 @@ on_install() {
 	ui_print "Local MD5: "$LMD5
 	ui_print "REMOTE MD5: "$RMD5
 	
-    if [ ! "$LMD5" == "$RMD5" ]; then
-      abort "MD5 of downloaded file does not match the remote file! Please try to flash the module again. Aborting."
-    fi
-	
+  
 	if [ ! -f $TARGETPATH/SystemUIGoogle.apk ]; then
 		ui_print "Download FAILED: "$URL
 		ui_print ""
@@ -199,6 +196,11 @@ on_install() {
 		ui_print " => Github servers are sometimes unreliable. Check the changelog if the current security patch is supported. If that is the case try to install the module again till the download succeeds"
 		abort " => The update with security patch version '"$SECURITY_PATCH_VERSION"' is not supported yet. In that case please wait for the module to be updated."
 	fi	
+	
+	if [ ! "$LMD5" == "$RMD5" ]; then
+      abort "MD5 of downloaded file does not match the remote file! Please try to flash the module again. Aborting."
+    fi
+	
 	
 	ui_print " "
 	ui_print "SUCCESSFULLY INSTALLED."
