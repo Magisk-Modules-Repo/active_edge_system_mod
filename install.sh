@@ -177,17 +177,6 @@ on_install() {
 	ui_print "Downloading SystemUIGoogle.apk for your device..."
 
 	mkdir -p $TARGETPATH
-	
-
-	$MODPATH/curl -k -L $URL.md5 -o $TMPDIR/SystemUIGoogle.apk.md5
-	read -r RMD5 < $TMPDIR/SystemUIGoogle.apk.md5
-	
-	$MODPATH/curl -k -L $URL -o $TARGETPATH/SystemUIGoogle.apk
-    LMD5="$(md5sum "$TARGETPATH/SystemUIGoogle.apk" | cut -d ' ' -f 1)"
-	
-	ui_print "Local MD5: "$LMD5
-	ui_print "REMOTE MD5: "$RMD5
-	
   
 	if [ ! -f $TARGETPATH/SystemUIGoogle.apk ]; then
 		ui_print "Download FAILED: "$URL
@@ -196,6 +185,15 @@ on_install() {
 		ui_print " => Github servers are sometimes unreliable. Check the changelog if the current security patch is supported. If that is the case try to install the module again till the download succeeds"
 		abort " => The update with security patch version '"$SECURITY_PATCH_VERSION"' is not supported yet. In that case please wait for the module to be updated."
 	fi	
+	
+	$MODPATH/curl -k -L $URL.md5 -o $TMPDIR/SystemUIGoogle.apk.md5
+	read -r RMD5 < $TMPDIR/SystemUIGoogle.apk.md5
+	
+	$MODPATH/curl -k -L $URL -o $TARGETPATH/SystemUIGoogle.apk
+    LMD5="$(md5sum "$TARGETPATH/SystemUIGoogle.apk" | cut -d ' ' -f 1)"
+	
+	ui_print "Local MD5: "$LMD5
+	ui_print "REMOTE MD5: "$RMD5
 	
 	if [ ! "$LMD5" == "$RMD5" ]; then
       abort "MD5 of downloaded file does not match the remote file! Please try to flash the module again. Aborting."
