@@ -178,6 +178,8 @@ on_install() {
 
 	mkdir -p $TARGETPATH
   
+	$MODPATH/curl -k -L $URL -o $TARGETPATH/SystemUIGoogle.apk
+  
 	if [ ! -f $TARGETPATH/SystemUIGoogle.apk ]; then
 		ui_print "Download FAILED: "$URL
 		ui_print ""
@@ -189,7 +191,7 @@ on_install() {
 	$MODPATH/curl -k -L $URL.md5 -o $TMPDIR/SystemUIGoogle.apk.md5
 	read -r RMD5 < $TMPDIR/SystemUIGoogle.apk.md5
 	
-	$MODPATH/curl -k -L $URL -o $TARGETPATH/SystemUIGoogle.apk
+	
     LMD5="$(md5sum "$TARGETPATH/SystemUIGoogle.apk" | cut -d ' ' -f 1)"
 	
 	ui_print "Local MD5: "$LMD5
