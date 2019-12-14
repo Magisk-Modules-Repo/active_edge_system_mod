@@ -30,8 +30,9 @@ After installing the Magisk Module you need to install the Edge Sense Plus app f
 <br/>
 
 ### Edge Sense Sense Plus
-#### [![Edge Sense Plus on Google Play](https://img.xda-cdn.com/Quid2yAsEr-W-fb5sfKfE66Ag_w=/http%3A%2F%2Fi.imgur.com%2F9WHaPVR.png)](https://play.google.com/store/apps/details?id=eu.duong.edgesenseplus&hl=en)
+#### Google suspended the app from the playstore, no idea if it will come back. So for now it will be hosted on my GitHub.
 
+#### [![Edge Sense Plus via GithHub]([img]https://i.imgur.com/C6S6AJ1.png[/img])](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/raw/Files/EdgeSensePlus.apk)
 
 ### Changelog
 * __v55_
