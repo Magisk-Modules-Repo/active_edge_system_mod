@@ -30,25 +30,23 @@ After installing the Magisk Module you need to install the Edge Sense Plus app f
 <br/>
 
 ### Edge Sense Sense Plus
-#### Google suspended the app from the playstore, no idea if it will come back. So for now it will be hosted on my GitHub.
-
-#### [![Edge Sense Plus via GithHub]([img]https://i.imgur.com/C6S6AJ1.png[/img])](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/raw/Files/EdgeSensePlus.apk)
+#### [![Edge Sense Plus on Google Play](https://img.xda-cdn.com/Quid2yAsEr-W-fb5sfKfE66Ag_w=/http%3A%2F%2Fi.imgur.com%2F9WHaPVR.png)](https://play.google.com/store/apps/details?id=eu.duong.edgesenseplus&hl=en)
 
 ### Changelog
-* __v55_
+* __v55__
   * December Patch Level compatibility
-* __v54_
+* __v54__
   * Added MD5 Sum check to prevent corrupted files from bad downloads to be flashed
-* __v53_
+* __v53__
   * November Patch Level compatibility
-* __v52_
+* __v52__
   * Pixel 4 support added
-* __v51_
+* __v51__
   * Moved files from master and download correct SystemUIGoogle.apk (device, release and path version) from the Files branch.
   * Credits to Zackptg5 for the curl lib and Skittles for the idea and updated script.
-* __v50_
+* __v50__
   * October Patch Level compatibility
-* __v50_
+* __v50__
   * Android 10 support
 * __v41__
   * Fixed Pixel 3a XL (bonito)
