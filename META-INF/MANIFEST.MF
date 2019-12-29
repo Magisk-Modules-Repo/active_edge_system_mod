@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Created-By: MiXplorer
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest: Lzl1y1cC6TvXytLj6okU81/P8AA=
+
+Name: module.prop
+SHA1-Digest: QrfTS5kyTpI/8uZ+aRYXWZHOdlA=
+
+Name: curl
+SHA1-Digest: iHvd2q22Ith4ltxaf922kDkqRCo=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest: CParKoW6QMIWrnOTWTa4xaQDGng=
+
+Name: customize.sh
+SHA1-Digest: +8cEwHI65wsisZwhLuqTHSJPG20=
+
+Name: post-fs-data.sh
+SHA1-Digest: IdoP0IGOqji4xd9c4Qm4EU6YI5I=
+
+Name: README.md
+SHA1-Digest: jvjR/dgHc1aVXQI0CCanRL6dH8Q=
+

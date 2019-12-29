@@ -5,7 +5,6 @@ MODDIR=${0%/*}
 
 # This script will be executed in post-fs-data mode
 # More info in the main Magisk thread
-
 INSTALL_SECURITY_PATCH_VERSION=INSTALLVAR
 
 SUPPORTED_PATCH_VERSION="20191205"
@@ -14,9 +13,5 @@ SECURITY_PATCH_VERSION=$(getprop ro.build.version.security_patch | tr -d "-")
 rm -f $MODDIR/disable
 
 if [ $SUPPORTED_PATCH_VERSION -lt $SECURITY_PATCH_VERSION ]; then
- touch $MODDIR/disable
-fi
-
-if [ $INSTALL_SECURITY_PATCH_VERSION -lt $SECURITY_PATCH_VERSION ]; then
  touch $MODDIR/disable
 fi
