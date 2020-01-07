@@ -35,6 +35,9 @@ After installing the Magisk Module you need to install the Edge Sense Plus app f
 #### [![Edge Sense Plus via GithHub]([img]https://i.imgur.com/C6S6AJ1.png[/img])](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/raw/Files/EdgeSensePlus.apk)
 
 ### Changelog
+* __v57__
+ * January Patch Level compatibility
+ * Fixed regression from during the template update
 * __v56__
   * Updated to the new Magisk module template
 * __v55_
