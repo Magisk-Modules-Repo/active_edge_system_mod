@@ -27,8 +27,6 @@ if [ $RELEASE != "8.1.0" ]; then
   RELEASEFOLDER=$RELEASE/$SECURITY_PATCH_VERSION
 fi
 
-unzip -o "$ZIPFILE" curl -d $TMPDIR
-cp -f $TMPDIR/curl $MODPATH/curl
 chmod 0755 $MODPATH/curl
 
 APK_PATH=$RELEASEFOLDER/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
@@ -66,7 +64,7 @@ if [ ! "$LMD5" == "$RMD5" ]; then
   abort "MD5 of downloaded file does not match the remote file! Please try to flash the module again. Aborting."
 fi
 
-sed -i "s/INSTALLVAR/$(getprop ro.build.version.security_patch | tr -d "-")/" $TMPDIR/post-fs-data.sh
+sed -i "s/INSTALLVAR/$(getprop ro.build.version.security_patch | tr -d "-")/" $MODPATH/post-fs-data.sh
 ui_print " "
 ui_print "SUCCESSFULLY INSTALLED."
 ui_print " "
