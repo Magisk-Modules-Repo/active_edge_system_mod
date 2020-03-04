@@ -36,7 +36,7 @@ After installing the Magisk Module you need to install the Edge Sense Plus app f
 
 ### Changelog
 * __v62__
- *  Fixed Pixel 2XL
+ *  Fixed Pixel 2/XL
 * __v61__
  *  March Patch Level compatibility
 * __v60__
