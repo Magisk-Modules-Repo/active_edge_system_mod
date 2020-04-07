@@ -7,7 +7,7 @@ MODDIR=${0%/*}
 # More info in the main Magisk thread
 INSTALL_SECURITY_PATCH_VERSION=INSTALLVAR
 
-SUPPORTED_PATCH_VERSION="20200305"
+SUPPORTED_PATCH_VERSION="20200405"
 SECURITY_PATCH_VERSION=$(getprop ro.build.version.security_patch | tr -d "-")
 
 rm -f $MODDIR/disable
