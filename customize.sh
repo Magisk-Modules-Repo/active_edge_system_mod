@@ -11,6 +11,7 @@ ui_print " "
 
 ui_print "Device: "$DEVICE
 ui_print "Android version: "$RELEASE
+ui_print "Android codename: "$CODENAME
 ui_print "Security patch version: "$SECURITY_PATCH_VERSION
 ui_print " "
 
