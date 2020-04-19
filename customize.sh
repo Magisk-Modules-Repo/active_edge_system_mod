@@ -4,6 +4,7 @@ ui_print "Installing Active Edge Module"
 
 DEVICE=`getprop ro.product.device`
 RELEASE=`getprop ro.build.version.release`
+CODENAME=`getprop ro.build.version.codename`
 SECURITY_PATCH_VERSION=`getprop ro.build.version.security_patch`
 ui_print " "
 
@@ -35,6 +36,10 @@ TARGETPATH=$MODPATH/system/priv-app/SystemUIGoogle
 
 if [ $RELEASE == "Q" ] || [ $RELEASE == "10" ]; then
   TARGETPATH=$MODPATH/system/product/priv-app/SystemUIGoogle
+fi
+
+if [ $CODENAME == "R" ]; then
+  TARGETPATH=$MODPATH/system/system_ext/priv-app/SystemUIGoogle
 fi
 
 URL=https://github.com/Magisk-Modules-Repo/active_edge_system_mod/raw/Files/$APK_PATH
