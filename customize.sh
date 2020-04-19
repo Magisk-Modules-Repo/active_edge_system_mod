@@ -40,6 +40,7 @@ fi
 
 if [ $CODENAME == "R" ]; then
   TARGETPATH=$MODPATH/system/system_ext/priv-app/SystemUIGoogle
+  APK_PATH=$CODENAME/$SECURITY_PATCH_VERSION/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
 fi
 
 URL=https://github.com/Magisk-Modules-Repo/active_edge_system_mod/raw/Files/$APK_PATH
