@@ -74,6 +74,14 @@ if [ ! "$LMD5" == "$RMD5" ]; then
 fi
 
 sed -i "s/INSTALLVAR/$(getprop ro.build.version.security_patch | tr -d "-")/" $MODPATH/post-fs-data.sh
+
+# remove dalvik-cache to prevent conflict
+DALVIKCACHEFILES="`find /data/dalvik-cache/ -print | grep 'SystemUI'`"
+if [ $DALVIKCACHEFILES ]; then 
+rm $DALVIKCACHEFILES
+ui_print " Clearing dalvik-cache... "
+fi
+
 ui_print " "
 ui_print "SUCCESSFULLY INSTALLED."
 ui_print " "
