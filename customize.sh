@@ -33,8 +33,6 @@ if [ $RELEASE != "8.1.0" ]; then
   RELEASEFOLDER=$RELEASE/$SECURITY_PATCH_VERSION
 fi
 
-chmod 0755 $MODPATH/curl
-
 APK_PATH=$RELEASEFOLDER/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
 
 TARGETPATH=$MODPATH/system/priv-app/SystemUIGoogle
@@ -53,7 +51,7 @@ ui_print "Downloading SystemUIGoogle.apk for your device..."
 
 mkdir -p $TARGETPATH
 
-$MODPATH/curl -k -L $URL -o $TARGETPATH/SystemUIGoogle.apk
+wget -O $TARGETPATH/SystemUIGoogle.apk $URL
 
 if [ ! -f $TARGETPATH/SystemUIGoogle.apk ]; then
   ui_print "Download FAILED: "$URL
@@ -61,9 +59,9 @@ if [ ! -f $TARGETPATH/SystemUIGoogle.apk ]; then
   ui_print "Possible reasons:"
   ui_print " => Github servers are sometimes unreliable. Check the changelog if the current security patch is supported. If that is the case try to install the module again till the download succeeds"
   abort " => The update with security patch version '"$SECURITY_PATCH_VERSION"' is not supported yet. In that case please wait for the module to be updated."
-fi	
+fi
 
-$MODPATH/curl -k -L $URL.md5 -o $TMPDIR/SystemUIGoogle.apk.md5
+wget -O $TMPDIR/SystemUIGoogle.apk.md5 $URL.md5
 read -r RMD5 < $TMPDIR/SystemUIGoogle.apk.md5
 
 LMD5="$(md5sum "$TARGETPATH/SystemUIGoogle.apk" | cut -d ' ' -f 1)"
@@ -76,6 +74,14 @@ if [ ! "$LMD5" == "$RMD5" ]; then
 fi
 
 sed -i "s/INSTALLVAR/$(getprop ro.build.version.security_patch | tr -d "-")/" $MODPATH/post-fs-data.sh
+
+# remove dalvik-cache to prevent conflict
+DALVIKCACHEFILES="`find /data/dalvik-cache/ -print | grep 'SystemUI'`"
+if [ $DALVIKCACHEFILES ]; then 
+rm $DALVIKCACHEFILES
+ui_print " Clearing dalvik-cache... "
+fi
+
 ui_print " "
 ui_print "SUCCESSFULLY INSTALLED."
 ui_print " "
