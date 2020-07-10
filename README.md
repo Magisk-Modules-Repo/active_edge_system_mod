@@ -29,11 +29,6 @@ After installing the Magisk Module you need to install the Edge Sense Plus app f
 #### [XDA Pixel 4 XL thread](https://forum.xda-developers.com/pixel-4-xl/themes/app-edge-sense-plus-customize-active-t3996257)
 <br/>
 
-### Edge Sense Sense Plus
-#### Google suspended the app from the playstore, no idea if it will come back. So for now it will be hosted on my GitHub.
-
-#### [![Edge Sense Plus via GithHub]([img]https://i.imgur.com/C6S6AJ1.png[/img])](https://github.com/Magisk-Modules-Repo/active_edge_system_mod/raw/Files/EdgeSensePlus.apk)
-
 ### Changelog
 * __v68__
  *  July Patch Level compatibility
