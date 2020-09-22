@@ -19,13 +19,10 @@ if [ $DEVICE != "walleye" ] && [ $DEVICE != "taimen" ] && [ $DEVICE != "crosshat
   abort " => Device '"$DEVICE"' is not supported"
 fi
 
-if [ $RELEASE != "9" ] && [ $RELEASE != "Q" ] && [ $RELEASE != "10" ]; then
+if [ $RELEASE != "9" ] && [ $RELEASE != "Q" ] && [ $RELEASE != "10" ]&& [ $RELEASE != "11" ]; then
   abort "   => Android version '"$RELEASE"' is not supported"
 fi
 
-if [ $CODENAME == "R" ]; then
-  abort "Under construction!"
-fi
 
 RELEASEFOLDER=$RELEASE
 
@@ -43,10 +40,11 @@ if [ $RELEASE == "Q" ] || [ $RELEASE == "10" ]; then
   TARGETPATH=$MODPATH/system/product/priv-app/SystemUIGoogle
 fi
 
-if [ $CODENAME == "R" ]; then
+if [ $RELEASE == "11" ]; then
   TARGETPATH=$MODPATH/system/system_ext/priv-app/SystemUIGoogle
-  APK_PATH=$CODENAME/$SECURITY_PATCH_VERSION/$DEVICE/priv-app/SystemUIGoogle/SystemUIGoogle.apk
 fi
+
+ui_print "TARGETPATH: "$TARGETPATH
 
 URL=https://github.com/Magisk-Modules-Repo/active_edge_system_mod/raw/Files/$APK_PATH
 ui_print "Downloading SystemUIGoogle.apk for your device..."
