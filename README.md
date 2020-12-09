@@ -30,6 +30,8 @@ After installing the Magisk Module you need to install the Edge Sense Plus app f
 <br/>
 
 ### Changelog
+* __v73__
+ *  December Patch Level compatibility
 * __v72__
  *  Bye Trump
 * __v71__
